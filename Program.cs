@@ -31,7 +31,21 @@ int NumberOfValues(string[] arr)
     return m;
 }
 
+string[] MinimumThreeCharacters(string[] arr, int m)
+{
+    string[] newArray = new string[m];
 
+    for (int i = 0, j = 0; i < arr.Length && j < newArray.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            newArray[j] = arr[i];
+            j++;
+        }
+    }
+
+    return newArray;
+}
 
 Console.WriteLine("Input size array: ");
 int n = Convert.ToInt32(Console.ReadLine());
@@ -45,5 +59,5 @@ if (NumberOfValues(myArray) == 0)
 }
 else
 {
-
+    ShowArray(MinimumThreeCharacters(myArray, NumberOfValues(myArray)));
 }
