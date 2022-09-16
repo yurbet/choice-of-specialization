@@ -1,4 +1,4 @@
-﻿void ShowArray(int[] arr)
+﻿void ShowArray(string[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -19,6 +19,9 @@ string[] CreateArray(int size)
     return arr;
 }
 
+
+
 Console.WriteLine("Input size array: ");
 int n = Convert.ToInt32(Console.ReadLine());
-
+string[] myArray = CreateArray(n);
+ShowArray(myArray);
