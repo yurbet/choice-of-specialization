@@ -19,9 +19,31 @@ string[] CreateArray(int size)
     return arr;
 }
 
+int NumberOfValues(string[] arr)
+{
+    int m = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) m++;
+    }
+
+    return m;
+}
+
 
 
 Console.WriteLine("Input size array: ");
 int n = Convert.ToInt32(Console.ReadLine());
 string[] myArray = CreateArray(n);
 ShowArray(myArray);
+Console.WriteLine();
+
+if (NumberOfValues(myArray) == 0)
+{
+    Console.WriteLine("There are no elements in the array with a length less than or equal to three");
+}
+else
+{
+
+}
